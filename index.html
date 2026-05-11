@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alimentação - Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela Inicial -->
+        <div id="telaInicial">
+            <div class="logo-section">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Restaurante Delícia" class="logo">
+            </div>
+            <h1>Restaurante KitchenFoOD</h1>
+            <p class="subtitle">O melhor sabor da cidade!</p>
+            <button class="btn-entrar" onclick="mostrarMenu()">Entrar</button>
+        </div>
+
+        <!-- Menu Principal -->
+        <div id="menuPrincipal" class="menu-principal">
+            <h2>🍽️ Menu do Sistema</h2>
+            <nav class="menu-nav">
+                <button class="menu-btn" onclick="mostrarCadastro()">1️⃣ Cadastrar Menu</button>
+                <button class="menu-btn" onclick="exibirMenuCompleto()">2️⃣ Exibir Todo o Menu</button>
+                <button class="menu-btn" onclick="exibirPratosQuentes()">3️⃣ Pratos Quentes</button>
+                <button class="menu-btn" onclick="exibirBebidas()">4️⃣ Bebidas/Sucos</button>
+                <button class="menu-btn" onclick="exibirLanches()">5️⃣ Lanches</button>
+                <button class="menu-btn" style="background: linear-gradient(45deg, #dc3545, #c82333);" onclick="sairApp()">6️⃣ Sair</button>
+            </nav>
+            <button class="btn-voltar" onclick="voltarInicial()">← Voltar</button>
+        </div>
+
+        <!-- Formulário de Cadastro -->
+        <div id="formCadastro" class="form-cadastro">
+            <h2>📝 Cadastrar Item do Menu</h2>
+            <div class="form-group">
+                <label>Tipo:</label>
+                <select id="tipoItem">
+                    <option value="Prato">🍲 Prato Quente</option>
+                    <option value="Bebida">🥤 Bebida/Suco</option>
+                    <option value="Lanche">🥪 Lanche</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Nome do Item:</label>
+                <input type="text" id="nomeItem" placeholder="Ex: Filé à Parmegiana">
+            </div>
+            <div class="form-group">
+                <label>Preço (R$):</label>
+                <input type="number" id="precoItem" step="0.01" placeholder="0.00">
+            </div>
+            <button class="menu-btn" onclick="cadastrarItem()" style="width: 100%;">Cadastrar Item</button>
+            <button class="btn-voltar" onclick="voltarMenu()">← Voltar ao Menu</button>
+        </div>
+
+        <!-- Lista Completa -->
+        <div id="listaCompleta" class="lista-menu"></div>
+
+        <!-- Mensagem de Fechamento -->
+        <div id="fechamento" class="fechamento">
+            <h2>👋 Obrigado por usar nosso sistema!</h2>
+            <p style="font-size: 1.2em; margin-top: 15px;">Você fechou o aplicativo com sucesso!</p>
+            <button class="btn-fechar" onclick="reiniciarApp()">🔄 Reiniciar</button>
+        </div>
+    </div>
+
+    <script>
+       
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
